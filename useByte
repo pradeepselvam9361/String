@@ -1,0 +1,7 @@
+class Main {
+    public static void main(String[] args) {
+        byte b1[] = {65,68,69};
+        String str1 = new String(b1);
+        System.out.println(str1);
+    }
+}
