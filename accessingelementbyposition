@@ -1,0 +1,9 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        byte b1[] ={65,98,12,56}; 
+        String str1 = new String(b1,1,2);
+        System.out.print(str1);
+    }
+}
