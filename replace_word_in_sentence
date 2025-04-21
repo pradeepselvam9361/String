@@ -1,0 +1,25 @@
+import java.util.*;
+class Main {
+    static void replaceWord(String str,String subString,String replacement){
+        String []word1 = str.split(" ");
+        for(int i = 0;i<word1.length;i++){
+            if(word1[i].equals(subString)){
+                word1[i]=replacement;
+            }
+        }
+        for(String word3:word1){
+            System.out.print(word3+" ");
+        }
+    }
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("The provided string is below \nchange cannot to can");
+    String str = "Yep, You cannot have lunch!";
+    System.out.println(str);
+    System.out.print("Enter the substring to replace:");
+    String subString = sc.nextLine();
+    System.out.print("Enter the substring that need to replaced with:");
+    String replacement = sc.nextLine();
+    replaceWord(str,subString,replacement);
+    }
+}

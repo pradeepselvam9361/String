@@ -1,0 +1,38 @@
+import java.util.*;
+class Main {
+    static String removeSpaces(String str){
+        String str2 = "";
+        for(int i = 0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(ch == ' '){
+                continue;
+            }
+            str2+=ch;
+        }
+        return str2;
+    }
+    static String reverseString(String str){
+        String str1 = "";
+        for(int i = str.length()-1;i>=0;i--){
+            char ch = str.charAt(i);
+            str1+=ch;
+        }
+        return str1;
+    }
+    static void conditionCheck(String str,String str1){
+        if(str.equals(str1)){
+            System.out.print("It is palindrome");
+        }else{
+            System.out.print("It is not a palindrome");
+        }
+    }
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a string:");
+    String str = sc.nextLine();
+    String str1 = str.toLowerCase();
+    String noSpace = removeSpaces(str1);
+    String reversedString = reverseString(noSpace);
+    conditionCheck(noSpace,reversedString);
+    }
+}
